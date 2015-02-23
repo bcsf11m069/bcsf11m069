@@ -1,0 +1,10 @@
+﻿@model echoicewear.Models.Member
+
+@{
+    ViewBag.Title = "NotMember";
+}
+
+<h2>You are not a Member. First you need to sign up </h2>
+<form action="/MemberAccount/Register" method="post" class="form-stacked">
+    <div class="actions"><input tabindex="9" class="btn btn-inverse large" type="submit" value="Click Here to Sign Up"></div>
+</form>

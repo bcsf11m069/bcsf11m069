@@ -1,0 +1,27 @@
+﻿@model List<echoicewear.Models.Member>
+
+@{
+    ViewBag.Title = "Members";
+}
+
+<h2>Members</h2>
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Password</td>
+    </tr>
+   
+@foreach (var s in Model)
+{
+    <tr>
+        <td>@s.Name</td>
+        <td>@s.Email</td>
+        <td>@s.Password</td>
+        <td>
+            <a href = "/MemberAccount/Delete/@s.Id">Delete It</a>
+        </td>
+    </tr>
+
+}
+</table>

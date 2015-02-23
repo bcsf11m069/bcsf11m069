@@ -1,0 +1,109 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta charset="utf-8">
+		<title>Online Clothing Stuff</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<!-- bootstrap -->
+		<link href="~/Content/bootstrap.min.css" rel="stylesheet">      
+		<link href="~/Content/bootstrap-responsive.min.css" rel="stylesheet">
+		
+		<link href="~/Content/bootstrappage.css" rel="stylesheet"/>
+		
+		<!-- global styles -->
+		<link href="~/Content/flexslider.css" rel="stylesheet"/>
+		<link href="~/Content/main.css" rel="stylesheet"/>
+
+		<!-- scripts -->
+		<script src="~/Scripts/jquery-1.7.2.min.js"></script>
+		<script src="~/Scripts/bootstrap.min.js"></script>				
+		<script src="~/Scripts/superfish.js"></script>	
+		<script src="~/Scripts/jquery.scrolltotop.js"></script>
+	</head>
+    <body>		
+		<div id="top-bar" class="container">
+			<div class="row">
+				<div class="span4">
+					<form method="POST" class="search_form">
+						<input type="text" class="input-block-level search-query" Placeholder="eg. T-sirt">
+					</form>
+				</div>
+				<div class="span8">
+					<div class="account pull-right">
+						<ul class="user-menu">				
+							<li><a href="#">My Account</a></li>
+
+                            @*<li><a href="@Url.Content("~/Product/cart")">Your Cart</a></li>
+							<li><a href="@Url.Content("~/Product/checkout")">Checkout</a></li>					
+							<li><a href="@Url.Content("~/MemberAccount/register")">Login</a></li>*@
+
+
+							<li>@Html.ActionLink("Cart", "cart", "Product")</li>
+							<li>@Html.ActionLink("CheckOut", "checkout", "Product")</li>					
+							<li>@Html.ActionLink("Login","register", "MemberAccount")</li>		
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="wrapper" class="container">
+			<section class="navbar main-menu">
+				<div class="navbar-inner main-menu">
+                    <a href="index.html" class="logo pull-left"><img src="~/Images/main_logo.png" class="site_logo" alt=""></a>
+                    <nav id="menu" class="pull-right">
+						<ul>
+							<li>@Html.ActionLink("Woman","products","Product")					
+								<ul>
+									@*<li><a href="@Url.Content("~/Product/products")">Nasreen</a></li>									
+									<li><a href="@Url.Content("~/Product/products")">Parveen</a></li>
+									<li><a href="@Url.Content("~/Product/products")">Mehreen</a></li>*@
+                                    
+                                    <li>@Html.ActionLink("Nasreen","products","Product")</li>									
+									<li>@Html.ActionLink("Parveen","products","Product")</li>
+									<li>@Html.ActionLink("Mehreen","products","Product")</li>									
+								</ul>
+							</li>															
+							<li>@Html.ActionLink("Man","products","Product")</li>
+                            <li>@Html.ActionLink("Kids","products","Product")</li>
+                            <li>@Html.ActionLink("Sports","products","Product")			
+								<ul>									
+									<li>@Html.ActionLink("Gifts&Tech","products","Product")</li>
+									<li>@Html.ActionLink("Ties&Hats","products","Product")</li>
+									<li>@Html.ActionLink("Cold Weather","products","Product")</li>
+								</ul>
+							</li>
+                            <li>@Html.ActionLink("Look Good Trends","products","Product")</li>
+                            <li>@Html.ActionLink("Contact Us","contact","MemberAccount")</li>							
+						</ul>
+					</nav>
+				</div>
+			</section>
+        </div>
+    <div>
+        @RenderBody()
+    </div>
+        <div id="gmap" class="contact-map"></div>
+        <section id="footer-bar">
+            <div class="row">
+				<div class="span5">
+					<p class="logo"><img src="~/Images/main_logo.png" class="site_logo" alt=""></p>
+					<p>Here is the way You wear in your own choice,Just be with us.>
+					<br/>
+					<span class="social_icons">
+						<a class="facebook" href="http://www.facebook.com">Facebook</a>
+						<a class="twitter" href="http://www.twitter.com">Twitter</a>							
+						<a class="vimeo" href="http://www.vimeo.com">Vimeo</a>
+					</span>
+				</div>					
+			</div>
+            <a href ="http://www.facebook.com">Facebook</a>
+            <a class="twitter" href="http://www.twitter.com">Twitter</a>							
+		    <a class="vimeo" href="http://www.vimeo.com">Vimeo</a>	
+		</section>
+		<section id="copyright">
+			<span> PUCIT Copyrights 2015 echoicewear.</span>
+		</section>
+    </body>
+</html>
